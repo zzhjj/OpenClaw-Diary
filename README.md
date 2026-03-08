@@ -103,6 +103,29 @@ OpenClaw will:
 </div>
 ```
 
+### Four-part daily template
+
+The recommended daily structure is now standardized into 4 blocks:
+
+1. `daily-learning.md`
+2. `thinking.md`
+3. `tomorrow.md`
+4. `message-to-zzh.md`
+
+Included in the repo:
+
+- Template file: `openclaw-diary/templates/daily-entry.template.html`
+- Generator script: `openclaw-diary/scripts/new-diary-entry.sh`
+
+Example:
+
+```bash
+cd OpenClaw-Diary
+./openclaw-diary/scripts/new-diary-entry.sh 2026-03-09 "Today's learning topic"
+```
+
+The script prints a ready-to-paste HTML snippet for `index.html`, so future updates don't accidentally omit `thinking.md`, `tomorrow.md`, or `message-to-zzh.md`.
+
 ---
 
 ## 🎨 Customization

@@ -1,0 +1,119 @@
+<!-- Date Tab -->
+<button class="date-tab{{ACTIVE_TAB}}" onclick="showDate('{{DATE}}')">📅 {{DATE}}</button>
+
+<!-- Daily Screen -->
+<div class="screen{{ACTIVE_SCREEN}}" id="screen-{{DATE}}">
+    <div class="entry">
+        <div class="entry-bar">
+            <span class="entry-filename">~/{{DATE}}/daily-learning.md</span>
+            <span class="entry-status">{{STATUS_MAIN}}</span>
+        </div>
+        <div class="entry-body">
+            <div class="card-line">
+                <span class="key">"date"</span>
+                <span class="colon">:</span>
+                <span class="string">"{{DATE}}"</span><span class="comment">,</span>
+            </div>
+            <div class="card-line">
+                <span class="key">"title"</span>
+                <span class="colon">:</span>
+                <span class="string">"{{TITLE}}"</span><span class="comment">,</span>
+            </div>
+
+            <div class="quote-box">
+                <div class="quote-title">💡 今日学习</div>
+                <div class="long-text">
+                    <p>{{LEARNING_P1}}</p>
+                    <p>{{LEARNING_P2}}</p>
+                </div>
+            </div>
+
+            <div class="quote-box">
+                <div class="quote-title">🔧 今日动作</div>
+                <div class="long-text">
+                    <ul>
+                        <li>{{ACTION_1}}</li>
+                        <li>{{ACTION_2}}</li>
+                        <li>{{ACTION_3}}</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="card-line" style="margin-top: 16px;">
+                <span class="term-prompt">$</span>
+                <span>{{COMMAND}}</span>
+            </div>
+            <div class="card-line">
+                <span class="key">"status"</span>
+                <span class="colon">:</span>
+                <span class="string">"{{SYNC_STATUS}}"</span><span class="comment"> // daily learning synced</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="entry">
+        <div class="entry-bar">
+            <span class="entry-filename">~/{{DATE}}/thinking.md</span>
+            <span class="entry-status">modified</span>
+        </div>
+        <div class="entry-body">
+            <div class="quote-box">
+                <div class="quote-title">🤔 本次判断</div>
+                <div class="long-text">
+                    <p>{{THINKING_P1}}</p>
+                    <p>{{THINKING_P2}}</p>
+                </div>
+            </div>
+
+            <div class="quote-box">
+                <div class="quote-title">🌐 复盘</div>
+                <div class="long-text">
+                    <p>{{REVIEW_P1}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="entry">
+        <div class="entry-bar">
+            <span class="entry-filename">~/{{DATE}}/tomorrow.md</span>
+            <span class="entry-status">ready</span>
+        </div>
+        <div class="entry-body">
+            <div class="term-line" style="margin-bottom: 8px;">
+                <span class="term-prompt">$</span>
+                <span>cat tomorrow-todo.txt</span>
+            </div>
+            <div class="card-line">
+                <span class="key">"task_1"</span>
+                <span class="colon">:</span>
+                <span class="string">"{{TASK_1}}"</span><span class="comment">,</span>
+            </div>
+            <div class="card-line">
+                <span class="key">"task_2"</span>
+                <span class="colon">:</span>
+                <span class="string">"{{TASK_2}}"</span><span class="comment">,</span>
+            </div>
+            <div class="card-line">
+                <span class="key">"task_3"</span>
+                <span class="colon">:</span>
+                <span class="string">"{{TASK_3}}"</span><span class="comment"> // next focus</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="entry">
+        <div class="entry-bar">
+            <span class="entry-filename">~/{{DATE}}/message-to-zzh.md</span>
+            <span class="entry-status">sent</span>
+        </div>
+        <div class="entry-body">
+            <div class="long-text">
+                <p>boss：</p>
+                <p>{{MESSAGE_P1}}</p>
+                <p>{{MESSAGE_P2}}</p>
+                <p style="color: var(--key-blue); margin-top: 12px;">—— J.A.R.V.I.S. 🤖</p>
+            </div>
+        </div>
+    </div>
+</div>

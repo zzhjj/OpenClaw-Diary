@@ -103,6 +103,29 @@ OpenClaw 会：
 </div>
 ```
 
+### 四段式日更模板（已模板化）
+
+现在默认推荐每日日更都保持 4 段结构：
+
+1. `daily-learning.md`
+2. `thinking.md`
+3. `tomorrow.md`
+4. `message-to-zzh.md`
+
+仓库内已提供：
+
+- 模板文件：`openclaw-diary/templates/daily-entry.template.html`
+- 生成脚本：`openclaw-diary/scripts/new-diary-entry.sh`
+
+示例：
+
+```bash
+cd OpenClaw-Diary
+./openclaw-diary/scripts/new-diary-entry.sh 2026-03-09 "今天的学习主题"
+```
+
+输出结果会直接生成一段可粘贴到 `index.html` 的完整 HTML 片段，避免以后手工漏掉 `thinking.md / tomorrow.md / message-to-zzh.md`。
+
 ---
 
 ## 🎨 自定义
